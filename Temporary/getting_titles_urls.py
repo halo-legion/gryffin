@@ -8,7 +8,6 @@ url_input = input("Enter Your Question: ")
 url = f"https://www.google.dz/search?q={url_input}"
 page = requests.get(f"https://www.google.dz/search?q={url_input}")
 soup = BeautifulSoup(page.content, "lxml")
-links = soup.findAll("a")
 for link in soup.find_all("a", href=re.compile("(?<=/url\?q=)(htt.*://.*)")):
     links = re.split(":(?=http)", link["href"].replace("/url?q=", ""))
     print("----------------------------------------------------------------------------------------------------------------")
