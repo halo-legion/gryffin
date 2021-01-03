@@ -20,12 +20,14 @@
    <button input type="button" value="Delete Row" onclick="DeleteRow()">">Back</button>
     <br><br>
   {% for link in context %}
+      <span>
 <table id="link_table">
 <tr>
     <td>
-        <a href="{{ link }}">{{ link }}</a>
+        <a href="{{ link }}" target="_blank">{{ link }}</a>
     </td>
 </tr>
 </table>
+      </span>
     {% endfor %}
 {% endblock %}
