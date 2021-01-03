@@ -38,8 +38,9 @@ def Home(request):
                 websites_name = match.group()
                 for website_data in best_websites_data:
                     if website_data == websites_name:
-                        if new_link not in best_link:
-                            best_link.append(new_link)
+                        if requests.get(new_link).status_code == 200:
+                            if new_link not in best_link:
+                                best_link.append(new_link + '\n')
 
         return render(request, "results.html", {"context": best_link})
     return render(request, "home.html")
