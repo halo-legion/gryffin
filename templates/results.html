@@ -2,22 +2,22 @@
 {% block title %}Gryffin-Search Results{% endblock %}
 {% block body %}
     <script type="text/javascript">
-        function DeleteRow() {
+        function DeleteRow(){
+        var delayInMilliseconds = 200; //1 second
+        setTimeout(function() {
+            window.location.href = "http://127.0.0.1:8000/";
+
+        }, delayInMilliseconds);
             var target = document.getElementById("link_table")
             var td = target.parentNode;
             var tr = td.parentNode;
             tr.parentNode.removeChild(tr);
-            var delayInMilliseconds = 200; //1 second
 
-            setTimeout(function() {
-                window.location.href = "http://127.0.0.1:8000/";
-
-            }, delayInMilliseconds);
         }
     </script>
 
 
-   <button input type="button" value="Delete Row" onclick="DeleteRow()">">Back</button>
+   <button input type="button" value="Delete Row" onclick="DeleteRow()">Back</button>
     <br><br>
   {% for link in context %}
       <span>
