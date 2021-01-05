@@ -7,7 +7,17 @@ body {
     display: table;
     background-color: black;
 }
-h1 {
+.neon {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select:none;
+    user-select:none;
+    -o-user-select:none;"
+    unselectable="on"
+    onselectstart="return false;"
+    onmousedown="return false;"
+}
+.flux {
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select:none;
@@ -17,7 +27,7 @@ h1 {
     onselectstart="return false;"
     onmousedown="return false;"
 }
-h4 {
+br {
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select:none;
