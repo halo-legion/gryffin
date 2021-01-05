@@ -7,26 +7,6 @@ body {
     display: table;
     background-color: black;
 }
-.neon {
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select:none;
-    user-select:none;
-    -o-user-select:none;"
-    unselectable="on"
-    onselectstart="return false;"
-    onmousedown="return false;"
-}
-.flux {
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select:none;
-    user-select:none;
-    -o-user-select:none;"
-    unselectable="on;"
-    onselectstart="return false;"
-    onmousedown="return false;"
-}
 br {
     -moz-user-select: none;
     -webkit-user-select: none;
@@ -49,7 +29,14 @@ br {
     font-size: 6vw;
     line-height: 6vw;
     text-shadow: 0 0 3vw #F40A35;
-
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select:none;
+    user-select:none;
+    -o-user-select:none;"
+    unselectable="on"
+    onselectstart="return false;"
+    onmousedown="return false;"
 }
 
 .flux {
@@ -58,6 +45,14 @@ br {
     font-size: 4vw;
     line-height: 4vw;
     text-shadow: 0 0 3vw #2356FF;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select:none;
+    user-select:none;
+    -o-user-select:none;"
+    unselectable="on"
+    onselectstart="return false;"
+    onmousedown="return false;"
 }
 
 .neon {
