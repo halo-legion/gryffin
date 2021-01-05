@@ -7,7 +7,26 @@ body {
     display: table;
     background-color: black;
 }
-
+h1 {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select:none;
+    user-select:none;
+    -o-user-select:none;"
+    unselectable="on"
+    onselectstart="return false;"
+    onmousedown="return false;"
+}
+h4 {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select:none;
+    user-select:none;
+    -o-user-select:none;"
+unselectable="on"
+onselectstart="return false;"
+onmousedown="return false;"
+}
 @font-face {
     font-family: neon;
     src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
@@ -20,6 +39,7 @@ body {
     font-size: 6vw;
     line-height: 6vw;
     text-shadow: 0 0 3vw #F40A35;
+
 }
 
 .flux {
