@@ -42,10 +42,14 @@ def Home(request):
                         if requests.get(new_link).status_code == 200:
                             if new_link not in best_link:
                                 best_link.append(new_link)
+        if len(best_link) > 0:
+            request.session['best_link'] = best_link
+            return HttpResponseRedirect("http://127.0.0.1:8000/results/")
+        else:
+            return render(request, "home.html", {"context": "No Results Found"})
     return render(request, "home.html")
 
 def Results(request):
     return render(request, "results.html")
 def error_404_views(request, exception):
     return render(request, "404.html")
-
