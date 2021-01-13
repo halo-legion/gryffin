@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 import os
 from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-import express as express
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -26,15 +25,6 @@ SECRET_KEY = 'w@%(8^4*pjs@b(t)8_fn!1r6+l+4qi-lxf&db0chmtg)urtr!y'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 ALLOWED_HOSTS = ['*']
-
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
-SECURE_HSTS_SECONDS = 31536000
-SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-SECURE_HSTS_PRELOAD = True
-SECURE_SSL_REDIRECT = True
-SECURE_REFERRER_POLICY = "strict-origin"
-SECURE_BROWSER_XSS_FILTER = True
 
 # Application definition
 
