@@ -10,7 +10,6 @@ body {
 .container1 {
   height: 100%;
 }
-
 .container1 {
   display: -webkit-flexbox;
   display: -ms-flexbox;
@@ -29,7 +28,24 @@ body {
   font-family: neon;
   src: url("neon.ttf");
 }
-
+.flux {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+.neon {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
 .flux {
   font-family: neon;
   color: #426DFB;
@@ -339,3 +355,21 @@ br {
     onmousedown="return false;"
 }
 
+#no_results {
+  font-family: neon;
+  color: red;
+  font-size: 3vw;
+  line-height: 4vw;
+  text-shadow: 0 0 3vw red;
+  position: absolute;
+  top: 60%;
+  left: 35%;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select:none;
+  user-select:none;
+  -o-user-select:none;"
+  unselectable="on;"
+  onselectstart="return false;"
+  onmousedown="return false;"
+}

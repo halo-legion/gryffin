@@ -1,29 +1,15 @@
 {% extends 'base.html' %}
 {% block title %}Results{% endblock %}
 {% block body %}
-    <script type="text/javascript">
-        function DeleteRow(){
-            var delayInMilliseconds = 200;
-            setTimeout(function() {
-                window.location.href = "http://127.0.0.1:8000/";
-            }, delayInMilliseconds);
-            var target = document.getElementById("link_table")
-            var td = target.parentNode;
-            var tr = td.parentNode;
-            tr.parentNode.removeChild(tr);
-
-        }
-    </script>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         {% load static %}
-        <link rel="stylesheet" href="{% static 'style.css' %}">
-        <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="shortcut icon" type="image/png" href="https://results.achaljhawar.repl.co/img/favicon.png">
+        <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css">
     </head>
     <body>
     <div style="text-align: right; margin: 20px;">
-        <button onclick="DeleteRow()" class="btn">
+        <br>
+        <button style="outline: none;" onclick="DeleteRow()" class="btn">
             <h3>
                 <b><span>Back</span></b>
             </h3>
@@ -43,11 +29,24 @@
             <tbody>
             {% for link in context %}
                 <tr colspan="1">
-                    <td style="align-text-left: true; font-size: 16px;"><a href="{{ link }}">{{ link }}</a></td>
+                    <td style="align-text-left: true; text-align: left;font-size: 16px;"><a target="_blank"
+                                                                                            href="{{ link }}">{{ link }}</a>
+                    </td>
                 </tr>
             {% endfor %}
             </tbody>
         </table>
     </center>
-
+    <script type="text/javascript">
+        function DeleteRow() {
+            var delayInMilliseconds = 200;
+            setTimeout(function () {
+                window.location.href = "https://gryffin-search-engine.herokuapp.com/";
+            }, delayInMilliseconds);
+            var target = document.getElementById("link_table")
+            var td = target.parentNode;
+            var tr = td.parentNode;
+            tr.parentNode.removeChild(tr);
+        }
+    </script>
 {% endblock %}

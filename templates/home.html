@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
-{% block title%}Gryffin{% endblock %}
+{% block title %}Gryffin{% endblock %}
 {% block body %}
-
     <head>
         <meta name="viewport" content="width=device-width">
         {% load static %}
-        <link href="{% static 'style.css' %}" rel="stylesheet" type="text/css" />
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="{% static 'style.css' %}" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+              integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+              crossorigin="anonymous">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     </head>
     <div class="container">
@@ -14,15 +15,17 @@
     <body style="background-color:black"></body>
     <div class="container1">
   <span>
+      <br>
   <h1 class="neon" align="center">Gryffin</h1>
   <h4 class="flux" align="center">The search engine </h4>
   <br>
   <br>
-
   <form method="POST" class="my-4 form-inline">
       {% csrf_token %}
       <label for="query" class="sr-only">URL</label>
-      <input required="" placeholder="🌐 What do you wanna search for?" type="text" name="query" id="query" class="form-control mr-2 col">
+      <input required="" autocomplete="off" onclick="del_text_no_result()"
+             placeholder="🌐 What do you wanna search for?" type="text" name="query" id="query"
+             class="form-control mr-2 col">
       <br>
         <button class="btn">
          <h3>
@@ -32,5 +35,12 @@
   </form>
          </span>
   </div>
-
+    </span>
+    </div>
+    <h1 id="no_results">{{ context }}</h1>
+    <script type="text/javascript">
+        function del_text_no_result() {
+            document.getElementById("no_results").innerText = ""
+        }
+    </script>
 {% endblock %}

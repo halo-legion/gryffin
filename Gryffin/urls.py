@@ -22,4 +22,3 @@ urlpatterns = [
     path('results/', include('results.urls'), name='results'),
 
 ]
-
